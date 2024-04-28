@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+.profile-wrapper {
+  background-image: url('./asserts/background.png'); /* Ensure the path to your background image is correct */
+  background-size: 100% 100%; /* Ensure the background image covers the entire page */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  width: 100vw; /* Make sure the wrapper spans the entire viewport width */
+  height: 400vh; /* Make sure the wrapper spans the entire viewport height */
+  overflow: hidden;
+}
+.timeline-container {
+    padding-left: 55px;
+    padding-right: 390px;
+    z-index: -50;
+  }
+  
+  .timeline-header {
+    position: relative;
+    height: 250px;
+    
+  }
+  .cover-container {
+    position: relative;
+  }
+  
+  .cover-image {
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+    max-height: 300px; 
+    object-fit: cover; /* Add object-fit property */
+  }
+
+  .edit-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 10px; /* Adjust icon size */
+    color: white; /* Adjust icon color */
+    cursor: pointer;
+    fill: white;
+  }
+  
+  .profile-image-container {
+    position: absolute;
+    bottom: -125px; /* Adjust bottom spacing */
+    right: 705px; /* Add right spacing */
+  }
+  
+  .profile-image {
+    object-fit: cover;
+    border: 4px solid white;
+    width: 166px;
+    height: 166px;
+    border-radius: 50%; /* Ensure rounded shape */
+  }
+ 
+  .edit-options {
+    position: absolute;
+    top: 40px; /* Adjust this value as needed */
+    right: 0;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .edit-options button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    background-color: #f0f0f0 ;
+    cursor: pointer;
+  }
+  
+  .edit-options button:hover {
+    background-color:#EBEDEF;
+  }
+  
+  .edit-icon {
+    cursor: pointer;
+  }
+  
+  /* Add curve effect when options are hidden */
+  .edit-icon::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    transform: translateX(-50%) rotate(45deg);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .edit-icon:hover::before {
+    top: calc(100% + 5px);
+  }
+
+  .profile-text h2{
+    font-size: 27px;
+    font-family: 'Nunito', sans-serif;
+    margin-top: 80px; 
+    margin-left: -707px;
+    
+  }
+
+.profile-text p{
+    font-family: 'Nunito',sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+    margin-left: 12px;
+
+}
+
+
+.location{
+  margin-top: 1px;
+  margin-right: 780px;
+
+}
+
+.location p{
+  font-size: 14px;
+  color: grey;
+  cursor: pointer;
+
+}
+
+.timeline-container .edit-link{
+    font-size: 14px;
+    position: absolute;
+    top: 45%;
+    left: -3%;
+    padding: 20px;
+    display: right;
+    margin-top: 440px; 
+    margin-right: 10px;
+    
+}
+
+
+.register-link p a{
+    color: #4141BF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.edit-link p {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.edit-link a {
+  text-decoration: none; /* Remove underline from links */
+  color: #4141BF; /* Set link color */
+}
+
+.divider {
+  width: 100%; /* Set the width to cover the entire container */
+  border-bottom: 1px solid rgba(201, 191, 191, 0.5); /* Set the border to create the line */
+  margin-top: 140px; /* Add margin to space the line from the content above */
+}
+.divider2 {
+  width: 100%; /* Set the width to cover the entire container */
+  border-bottom: 1px solid rgba(201, 191, 191, 0.5); /* Set the border to create the line */
+}
+
+.jobs h3{
+    font-family: 'Nunito',sans-serif;
+    font-size: 22px;
+    color: #8691CB;
+}
+
+.jobContainer {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: 10px;
+    max-width: 1830px;
+    margin: 0 auto;
+  }
+  
+  .singleJob {
+    box-sizing: border-box;
+    flex: 1 1 250px;
+    max-width: 400px; 
+    max-height: 410px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer; 
+    display: flex;
+    margin-bottom: 20px; 
+    flex-direction: column;
+  }
+  
+  
+  
+  
+  .flex_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .text_heading {
+    font-size: 16px;
+    font-weight: 600; 
+    color: #333;
+  }
+  
+  .span {
+    display: flex;
+    align-items: center;
+    color: #ccc;
+    gap: 10px;
+  }
+
+  .jobDetails {
+    overflow: hidden;
+  }
+  
+  .custom_paragraph {
+    font-size: 13px;
+    color: #959595; 
+    padding-top: 20px; 
+    border-top: 2px solid #ccc; 
+    margin-top: 20px;
+    height: 410px;
+    width: 400;
+    overflow: hidden;
+   
+  }
+  
+  .company_container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .company_name {
+    font-size: 14px; 
+    display: block;
+    margin: 10px;
+  }
+  
+  
+  /* CSS */
+  
+  .button13 {
+    background-color: #4141BF;
+    border: 1px solid #d5d9d9;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);  
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 29px;
+    padding: 0 6px 0 px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    touch-action: manipulation;
+    width: 100px;
+    border: none;
+    margin: 4px;
+  }
+  
+  
+  
+  /* CSS */
+  .button17 {
+    align-items: center;
+    appearance: none;
+    background-color: #F0F0F5;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-size: 14px;
+    font-weight: 400;
+    height: 40px;
+    justify-content: center;
+    line-height: normal;
+    width: 100px;
+    max-width: 80px;
+    padding: 2px 10px;
+    margin: 3px;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+  }
+  
+  .button17:hover {
+    background: #F6F9FE;
+    color: #174ea6;
+  }
+
+  .showMoreButton{
+    background-color: #4141BF;
+    border: 1px solid #d5d9d9;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);  
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 29px;
+    padding: 0 6px 0 px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    touch-action: manipulation;
+    width: 100px;
+    border: none;
+    margin: 4px;
+    margin-top: 40px;
+
+  }
+
+  .MoreButton{
+    position: relative;
+    margin-left: 1000px;
+    margin-top: 420px;
+    background-color: #8691CB;
+    border: 1px solid #d5d9d9;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);  
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 13px;
+    width: 100px;
+    height: 35px;
+    
+  }
+
+  .singleJobb{
+    max-width: 200px; 
+    max-height: 410px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer; 
+    display: flex;
+    margin-bottom: 20px; 
+    flex-direction: column;
+    margin-left: 1100px;
+    margin-top: 20px;
+    gap: 5px;
+
+  }
+
+   @media only screen and (max-width: 1024px) {
+    .profile-wrapper {
+      height: auto;
+    }
+  
+    .timeline-container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .profile-image-container {
+      bottom: -100px;
+      right: 120px;
+    }
+  
+    .profile-text h2 {
+      margin-left: -205px;
+    }
+  
+    .location {
+      margin-right: 155px;
+    }
+  }
+  
+  /* Media queries for tablets and smaller devices */
+  
+  @media only screen and (max-width: 768px) {
+    .profile-text h2 {
+      margin-left: -85px;
+    }
+  
+    .location {
+      margin-right: 115px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .profile-text h2 {
+      margin-left: -85px;
+    }
+  
+    .location {
+      margin-right: 115px;
+    }
+  }
+  
+  /* Media queries for mobile devices */
+  
+  @media only screen and (max-width: 480px) {
+    .profile-wrapper {
+      height: auto;
+    }
+  
+    .timeline-container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  
+    .profile-image-container {
+      bottom: -100px;
+      right: 20px;
+    }
+  
+    .profile-text h2 {
+      margin-left: -70px;
+      font-size: 24px;
+    }
+  
+    .location {
+      margin-right: 85px;
+    }
+  
+    .register-link p a {
+      font-size: 12px;
+    }
+  
+    .edit-link p {
+      margin-left: 10px;
+    }
+  }
