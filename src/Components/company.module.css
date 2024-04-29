@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
 
-.profile-wrapper {
+.profilewrapper {
   background-image: url('./asserts/background.png'); /* Ensure the path to your background image is correct */
   background-size: 100% 100%; /* Ensure the background image covers the entire page */
   background-repeat: no-repeat; /* Prevent the background image from repeating */
@@ -8,22 +8,22 @@
   height: 400vh; /* Make sure the wrapper spans the entire viewport height */
   overflow: hidden;
 }
-.timeline-container {
+.timelinecontainer {
     padding-left: 55px;
     padding-right: 390px;
     z-index: -50;
   }
   
-  .timeline-header {
+  .timelineheader {
     position: relative;
     height: 250px;
     
   }
-  .cover-container {
+  .covercontainer {
     position: relative;
   }
   
-  .cover-image {
+  .coverimage {
     width: 100%;
     height: 100%;
     max-width: 900px;
@@ -31,7 +31,7 @@
     object-fit: cover; /* Add object-fit property */
   }
 
-  .edit-icon {
+  .editicon {
     width: 24px;
     height: 24px;
     position: absolute;
@@ -43,13 +43,13 @@
     fill: white;
   }
   
-  .profile-image-container {
+  .profileimagecontainer {
     position: absolute;
     bottom: -125px; /* Adjust bottom spacing */
     right: 705px; /* Add right spacing */
   }
   
-  .profile-image {
+  .profileimage {
     object-fit: cover;
     border: 4px solid white;
     width: 166px;
@@ -57,7 +57,7 @@
     border-radius: 50%; /* Ensure rounded shape */
   }
  
-  .edit-options {
+  .editoptions {
     position: absolute;
     top: 40px; /* Adjust this value as needed */
     right: 0;
@@ -68,7 +68,7 @@
     z-index: 1;
   }
   
-  .edit-options button {
+  .editoptions button {
     display: block;
     width: 100%;
     padding: 10px;
@@ -78,16 +78,16 @@
     cursor: pointer;
   }
   
-  .edit-options button:hover {
+  .editoptions button:hover {
     background-color:#EBEDEF;
   }
   
-  .edit-icon {
+  .editicon {
     cursor: pointer;
   }
   
   /* Add curve effect when options are hidden */
-  .edit-icon::before {
+  .editicon::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -101,11 +101,11 @@
     transition: all 0.3s ease-in-out;
   }
   
-  .edit-icon:hover::before {
+  .editicon:hover::before {
     top: calc(100% + 5px);
   }
 
-  .profile-text h2{
+  .profiletext h2{
     font-size: 27px;
     font-family: 'Nunito', sans-serif;
     margin-top: 80px; 
@@ -113,7 +113,7 @@
     
   }
 
-.profile-text p{
+.profiletext p{
     font-family: 'Nunito',sans-serif;
     font-weight: 600;
     font-size: 14px;
@@ -136,7 +136,7 @@
 
 }
 
-.timeline-container .edit-link{
+.timelinecontainer .editlink{
     font-size: 14px;
     position: absolute;
     top: 45%;
@@ -149,19 +149,19 @@
 }
 
 
-.register-link p a{
+.registerlink p a{
     color: #4141BF;
     text-decoration: none;
     font-weight: 600;
 }
 
 
-.edit-link p {
+.editlink p {
   display: inline-block;
   margin-left: 20px;
 }
 
-.edit-link a {
+.editlink a {
   text-decoration: none; /* Remove underline from links */
   color: #4141BF; /* Set link color */
 }
@@ -196,7 +196,7 @@
   .singleJob {
     box-sizing: border-box;
     flex: 1 1 250px;
-    max-width: 400px; 
+    max-width: 300px; 
     max-height: 410px;
     padding: 30px;
     background-color: white;
@@ -207,8 +207,6 @@
     margin-bottom: 20px; 
     flex-direction: column;
   }
-  
-  
   
   
   .flex_container {
@@ -427,17 +425,17 @@
       height: auto;
     }
   
-    .timeline-container {
+    .timelinecontainer {
       padding-left: 10px;
       padding-right: 10px;
     }
   
-    .profile-image-container {
+    .profileimagecontainer {
       bottom: -100px;
       right: 20px;
     }
   
-    .profile-text h2 {
+    .profiletext h2 {
       margin-left: -70px;
       font-size: 24px;
     }
@@ -446,11 +444,286 @@
       margin-right: 85px;
     }
   
-    .register-link p a {
+    .registerlink p a {
       font-size: 12px;
     }
   
-    .edit-link p {
+    .editlink p {
       margin-left: 10px;
+    }
+  }
+
+/*---------------------------*/
+
+  .sectionheader {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0;
+    font: 300 60px 'Oswald', sans-serif;
+    color: #4141BF;
+    margin-top: 90px;
+    text-transform: uppercadirect-contact-containerse;
+    letter-spacing: 6px;
+  }
+  
+  .contactwrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    margin-left: 5px;
+    position: relative;
+    max-width: 865px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);;
+    border-radius: 20px;
+    color: black;
+    user-select: none;
+    touch-action: manipulation;
+
+
+  }
+  
+  .formhorizontal {
+    max-width: 400px;
+    font-family: 'Nunito',sans-serif;
+    font-weight: 400;
+  }
+  
+  .formcontrol {
+    width: 480px;
+    max-width: 400px;
+    max-height: 70px;
+    background-color: white;
+    margin-bottom: 50px;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    border-color: grey;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    border-style: none;
+  }
+
+  
+  .sendbutton {
+    background-color: #4141BF;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    height: 40px;
+    width: 150px;
+    margin-top: 70px; 
+    margin-left: 10px;
+    
+
+  }
+ 
+  
+  
+  
+  .altsendbutton {
+    width: 400px;
+    height: 34px;
+    transition: all .2s ease-in-out;
+  }
+  
+  .sendtext {
+    display: block;
+    margin-top: 10px;
+    font: 700 12px 'Lato', sans-serif;
+    letter-spacing: 2px;
+  }
+  
+
+  /* Begin Right Contact Page */
+  .directcontactcontainer {
+    max-width: 400px;
+  }
+  
+  /* Location, Phone, Email Section */
+  .contactlist {
+    list-style-type: none;
+    margin-left: -30px;
+    padding-right: 20px;
+  }
+  
+  .list_item {
+    line-height: 4;
+    color: #aaa;
+  }
+  
+  .contact_text {
+    font: 300 18px 'Lato', sans-serif;
+    letter-spacing: 1.9px;
+    color: black;
+  }
+  
+  .place {
+    margin-left: 62px;
+  }
+  
+  .phone {
+    margin-left: 56px;
+  }
+  
+  .gmail {
+    margin-left: 53px;
+  }
+  
+  .contact_text a {
+    color: black;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+  
+  .contact_text a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  
+  .socialmedialist {
+    position: relative;
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .socialmedialist li a {
+    color: grey;
+  }
+  
+  .socialmedialist li {
+    position: relative; 
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px 3px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: black;
+    background-color:white;
+    cursor: pointer; 
+    transition: all .2s ease-in-out;
+  }
+  
+  .socialmedialist li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 0 1px #4141BF;
+    transition: all .2s ease-in-out;
+  }
+  
+
+  
+  .socialmedialist li:hover:after {
+    opacity: 1;  
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+  }
+  
+  .socialmedialist li:hover a {
+    color: #000;
+  }
+  
+  .copyright {
+    font: 200 14px 'Oswald', sans-serif;
+    color: #555;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  hr {
+    border-color: rgba(3, 3, 3, 0.6);
+  }
+
+  .contact_icon {
+    color: white;
+    background-color: white;
+  }
+  
+  /* Begin Media Queries*/
+  @media screen and (max-width: 850px) {
+    .contactwrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    .directcontactcontainer, .formhorizontal {
+      margin: 0 auto;
+    }  
+    
+    .directcontactcontainer {
+      margin-top: 60px;
+      max-width: 300px;
+    }    
+    .socialmedialist li {
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+    }
+    .socialmedialist li:after {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+    }
+  }
+  
+  @media screen and (max-width: 569px) {
+  
+    .directcontactcontainer, .formwrapper {
+      float: none;
+      margin: 0 auto;
+    }  
+    .form_control, textarea {
+      
+      margin: 0 auto;
+    }
+   
+    
+    .name, .email, textarea {
+      width: 280px;
+    } 
+    
+    .directcontactcontainer {
+      margin-top: 60px;
+      max-width: 280px;
+    }  
+    .socialmedialist {
+      left: 0;
+    }
+    .socialmedialist li {
+      height: 55px;
+      width: 55px;
+      line-height: 55px;
+      font-size: 2rem;
+    }
+    .socialmedialist li:after {
+      width: 55px;
+      height: 55px;
+      line-height: 55px;
+    }
+    
+  }
+  
+  @media screen and (max-width: 410px) {
+    .sendbutton {
+      width: 99%;
     }
   }

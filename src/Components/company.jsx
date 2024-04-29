@@ -1,11 +1,17 @@
 import React, { useState, useRef } from 'react';
-import './company.css'; // Import CSS file
+import styles from './company.module.css'; // Import CSS file
 import { RiEdit2Line } from "react-icons/ri";
 import { IoTimeOutline } from "react-icons/io5";
 import Logo4 from './asserts/Logo4.png';
 import Logo5 from './asserts/Logo5.png';
 import coverImage from './asserts/back.png';
 import profImage from './asserts/bg.png';
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
+
+
 
 export default function Company() {
   const [showOptions, setShowOptions] = useState(false);
@@ -152,18 +158,28 @@ export default function Company() {
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, soluta facere ullam unde recusandae autem nisi adipisci assumenda veritatis excepturi fuga totam. Eum recusandae expedita culpa natus. Sint, non nisi.",
         time: "Now"
       },
-    //   {
-    //     id: 3,
-    //     title: "DevOps Engineer",
-    //     company: "Amazon",
-    //     logo: Logo4,
-    //     type: "Contract",
-    //     level: "Mid-level",
-    //     location: "Remote",
-    //     description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, soluta facere ullam unde recusandae autem nisi adipisci assumenda veritatis excepturi fuga totam. Eum recusandae expedita culpa natus. Sint, non nisi.",
-    //     time: "Now"
-    //   },
-    // Add more initial job data if needed
+      {
+        id: 3,
+        title: "DevOps Engineer",
+        company: "Amazon",
+        logo: Logo4,
+        type: "Contract",
+        level: "Mid-level",
+        location: "Remote",
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, soluta facere ullam unde recusandae autem nisi adipisci assumenda veritatis excepturi fuga totam. Eum recusandae expedita culpa natus. Sint, non nisi.",
+        time: "Now"
+      },
+      {
+        id: 3,
+        title: "DevOps Engineer",
+        company: "Amazon",
+        logo: Logo4,
+        type: "Contract",
+        level: "Mid-level",
+        location: "Remote",
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, soluta facere ullam unde recusandae autem nisi adipisci assumenda veritatis excepturi fuga totam. Eum recusandae expedita culpa natus. Sint, non nisi.",
+        time: "Now"
+      },
   ];
 
   const [jobs, setJobs] = useState(initialJobs);
@@ -218,26 +234,26 @@ export default function Company() {
   };
 
   return (
-    <div className='profile-wrapper'>  
-      <div className="timeline-container">
-        <div className="timeline-header">
-          <div className="cover-container">
-            <img src={backgroundImage || coverImage} className="cover-image" alt="cover" />
+    <div className={styles.profilewrapper}>  
+      <div className={styles.timelinecontainer}>
+        <div className={styles.timelineheader}>
+          <div className={styles.covercontainer}>
+            <img src={backgroundImage || coverImage} className={styles.coverimage} alt="cover" />
             <label htmlFor="backgroundImageInput">
-              <RiEdit2Line className="edit-icon" onClick={toggleOptions} />
+              <RiEdit2Line className={styles.editicon} onClick={toggleOptions} />
             </label>
             <input type="file" id="backgroundImageInput" accept="image/*" onChange={handleBackgroundImageChange} style={{ display: 'none' }} />
           </div>
-          <div className='profile-image-container'>
-            <div className="profile-image-frame">
-              <img src={profileImage || profImage} className='profile-image' alt='profile' />
+          <div className={styles.profileimagecontainer}>
+            <div className={styles.profileimageframe}>
+              <img src={profileImage || profImage} className={styles.profileimage} alt='profile' />
             </div>
             <label htmlFor="profileImageInput">
-              <RiEdit2Line className="edit-icon" />
+              <RiEdit2Line className={styles.editicon} />
             </label>
             <input type="file" id="profileImageInput" accept="image/*" onChange={handleProfileImageChange} style={{ display: 'none' }} />
           </div>
-          <div className='profile-text'>
+          <div className={styles.profiletext}>
             <h2 onClick={handleNameEdit}>{name}</h2>
             <input
               ref={nameInputRef}
@@ -249,7 +265,7 @@ export default function Company() {
               style={{ display: 'none' }}
             />
           </div>
-          <div className='profile-text'>
+          <div className={styles.profiletext}>
             <p onClick={handleBioEdit}>{bio}</p>
             <textarea
               ref={bioInputRef}
@@ -260,7 +276,7 @@ export default function Company() {
               style={{ display: 'none' }}
             />
           </div>
-          <div className='location'>
+          <div className={styles.location}>
             <p onClick={handleLocationEdit}>{location}</p>
             <input
               ref={locationInputRef}
@@ -272,107 +288,98 @@ export default function Company() {
               style={{ display: 'none' }}
             />
           </div>
-          <div className="edit-link">
+          <div className={styles.editlink}>
             <p><a href="#">Edit my profile</a></p>
             <p><a href="#">More</a></p>  
           </div>
-          <div className="divider"></div>
-          <div className='jobs'>
+          <div className={styles.divider}></div>
+          <div className={styles.jobs}>
             <h3>Featured Jobs</h3>
             <div>
-              <div className="jobContainer">
-                {visibleJobs.map(job => (
-                  <div key={job.id} className="singleJob">
-                    <div className="flex_container">
-                      <div className="company_container">
-                        <img src={job.logo} alt="Company Logo" />
-                        <h1 className="text_heading">{job.title}</h1>
-                      </div>
-                      <span className="span">
-                        <IoTimeOutline />{job.time}
-                      </span>
-                    </div>
-                    <span className="company_name">{job.company}</span>
-                    <button className="button17">{job.type}</button>
-                    <button className="button17">{job.level}</button>
-                    <button className="button17">{job.location}</button>
-                    <p className="custom_paragraph">{job.description}</p>
-                    <button className="button13" onClick={() => deleteJob(job.id)}>Apply Now</button>
-                  </div>
-                ))}
-                
+              <div className={styles.jobContainer}>
+              {visibleJobs.map(job => (
+  <div key={job.id} className={styles.singleJob}>
+    <div className={styles.flex_container}>
+      <div className={styles.company_container}>
+        <img src={job.logo} alt="Company Logo" />
+        <h1 className={styles.text_heading}>{job.title}</h1>
+      </div>
+      <span className={styles.span}>
+        <IoTimeOutline />{job.time}
+      </span>
+    </div>
+    <span className={styles.company_name}>{job.company}</span>
+    <button className={styles.button17}>{job.type}</button>
+    <button className={styles.button17}>{job.level}</button>
+    <button className={styles.button17}>{job.location}</button>
+    <p className={styles.custom_paragraph}>{job.description}</p>
+    <button className={styles.button13} onClick={() => deleteJob(job.id)}>Apply Now</button>
+    {/* Add the delete button here */}
+    <button className={styles.button13} onClick={() => deleteJob(job.id)}>Delete</button>
+  </div>
+))}
+
+
               </div>
+              
 
             </div>
-            <button onClick={toggleShowMore} className="showMoreButton">
+            <button onClick={toggleShowMore} className={styles.showMoreButton}>
                   {showMore ? "Show Less" : "Show More"}
                 </button>
+                <section id="contact">
+        <div className={styles.contactwrapper}>
+
+          <form id="contact-form" className={styles.formhorizontal} role="form">
+            <div className={styles.formgroup}>
+              <div className="col-sm-12">
+              <input type="email" className={styles.formcontrol} id="email" placeholder="EMAIL" name="email" value="" required />
+              </div>
+            </div>
+            <div className={styles.formgroup}>
+              <div className="col-sm-12">
+            <textarea className={styles.formcontrol} rows="10" placeholder="MESSAGE" name="message" required></textarea>
+            </div>
+            </div>
+            <button className={styles.sendbutton} id="submit" type="submit" value="SEND">
+              <div classNamelass={styles.altsendbutton}>
+                <i className="fa fa-paper-plane"></i><span class={styles.sendtext}>SEND</span>
+              </div>
+            </button>
+          </form>
+
+          <div className={styles.directcontactcontainer}>
+            <ul className={styles.contactlist}>
+              <li className={styles.list_item}><i class="fa fa-map-marker fa-2x"><span class={styles.contact_text}>City, State</span></i></li>
+              <li className={styles.list_item}><i class="fa fa-phone fa-2x"><span class={styles.contact_text}><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
+              <li className={styles.list_item}><i class="fa fa-envelope fa-2x"><span class={styles.contact_text}><a href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i></li>
+            </ul>
+            <hr />
+            <ul class={styles.socialmedialist}>
+              <li><a href="#" target="_blank" className={styles.contact_icon}><FaGithub /></a></li>
+              <li><a href="#" target="_blank" className={styles.contact_icon}><FaLinkedin /></a></li>
+              <li><a href="#" target="_blank" className={styles.contact_icon}><FaTwitter /></a></li>
+              <li><a href="#" target="_blank" className={styles.contact_icon}><FaFacebookSquare /></a></li>
+            </ul>
+            <hr />
+            <div className={styles.copyright}>&copy; ALL OF THE RIGHTS RESERVED</div>
           </div>
-          {/* <button className='MoreButton' onClick={toggleShowPostJob}>Post a Job</button> */}
-          {/* {showPostJob && (
-                          <div className="singleJob">
-                          <input
-                            type="text"
-                            placeholder="Title"
-                            name="title"
-                            value={newJobForm.title}
-                            onChange={handleChange}
-                          />
-                          <input
-                            type="text"
-                            placeholder="Company"
-                            name="company"
-                            value={newJobForm.company}
-                            onChange={handleChange}
-                          />
-                          <input
-                            type="file"
-                            accept="image/*"
-                            onChange={handleLogoChange}
-                          />
-                          <input
-                            type="text"
-                            placeholder="Type"
-                            name="type"
-                            value={newJobForm.type}
-                            onChange={handleChange}
-                          />
-                          <input
-                            type="text"
-                            placeholder="Level"
-                            name="level"
-                            value={newJobForm.level}
-                            onChange={handleChange}
-                          />
-                          <input
-                            type="text"
-                            placeholder="Location"
-                            name="location"
-                            value={newJobForm.location}
-                            onChange={handleChange}
-                          />
-                          <input
-                            type="text"
-                            placeholder="Description"
-                            name="description"
-                            value={newJobForm.description}
-                            onChange={handleChange}
-                          />
-                          <button className="button13" onClick={addJob}>Post</button>
-                        </div>
-          )} */}
+        </div>
+      </section>
+          </div>
           
         </div>
       </div>
-      <button className='MoreButton' onClick={toggleShowPostJob}>Post a Job</button>
+      <button className={styles.MoreButton} onClick={toggleShowPostJob}>Post a Job</button>
           {showPostJob && (
-                          <div className="singleJobb">
+                          <div className={styles.singleJobb}>
                           <input
                             type="text"
                             placeholder="Title"
                             name="title"
                             value={newJobForm.title}
                             onChange={handleChange}
+
                           />
                           <input
                             type="text"
@@ -414,9 +421,51 @@ export default function Company() {
                             value={newJobForm.description}
                             onChange={handleChange}
                           />
-                          <button className="button13" onClick={addJob}>Post</button>
+                          <button className={styles.button13} onClick={addJob}>Post</button>
                         </div>
           )}
+    
+      {/* Contact HTML Start */}
+      {/* <section id="contact">
+        <div className={styles.contactwrapper}>
+
+          <form id="contact-form" className={styles.formhorizontal} role="form">
+            <div className={styles.formgroup}>
+              <div className="col-sm-12">
+              <input type="email" className={styles.formcontrol} id="email" placeholder="EMAIL" name="email" value="" required />
+              </div>
+            </div>
+            <div className={styles.formgroup}>
+              <div className="col-sm-12">
+            <textarea className={styles.formcontrol} rows="10" placeholder="MESSAGE" name="message" required></textarea>
+            </div>
+            </div>
+            <button className={styles.sendbutton} id="submit" type="submit" value="SEND">
+              <div classNamelass={styles.altsendbutton}>
+                <i className="fa fa-paper-plane"></i><span class={styles.sendtext}>SEND</span>
+              </div>
+            </button>
+          </form>
+
+          <div className={styles.directcontactcontainer}>
+            <ul className={styles.contactlist}>
+              <li className={styles.list_item}><i class="fa fa-map-marker fa-2x"><span class={styles.contact_text}>City, State</span></i></li>
+              <li className={styles.list_item}><i class="fa fa-phone fa-2x"><span class={styles.contact_text}><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
+              <li className={styles.list_item}><i class="fa fa-envelope fa-2x"><span class={styles.contact_text}><a href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i></li>
+            </ul>
+            <hr />
+            <ul class={styles.socialmedialist}>
+              <li><a href="#" target="_blank" className={styles.contact_icon}><FaGithub /></a></li>
+              <li><a href="#" target="_blank" className={styles.contact_icon}><FaLinkedin /></a></li>
+              <li><a href="#" target="_blank" className={styles.contact_icon}><FaTwitter /></a></li>
+              <li><a href="#" target="_blank" className={styles.contact_icon}><FaFacebookSquare /></a></li>
+            </ul>
+            <hr />
+            <div className={styles.copyright}>&copy; ALL OF THE RIGHTS RESERVED</div>
+          </div>
+        </div>
+      </section> */}
+      {/* Contact HTML End */}
     </div>
   );
 }
